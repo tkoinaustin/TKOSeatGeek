@@ -8,7 +8,9 @@ target 'TKOSeatGeek' do
   pod 'PromiseKit/CorePromise'
 
   target 'TKOSeatGeekTests' do
-    inherit! :search_paths
+    pod 'OHHTTPStubs'
+    pod 'OHHTTPStubs/Swift'
+    pod 'OHHTTPStubs/HTTPMessage'
   end
 
 end

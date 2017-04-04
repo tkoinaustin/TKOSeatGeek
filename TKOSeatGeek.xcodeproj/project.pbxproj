@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67EEA05B104CCACE4470DE17 /* Pods_TKOSeatGeekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 537C8FBF358EAC80F862E8D7 /* Pods_TKOSeatGeekTests.framework */; };
 		750048C0B779DDBB2661D718 /* Pods_TKOSeatGeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0E010120934BE5C4876688B /* Pods_TKOSeatGeek.framework */; };
+		9F476C09F83FFA7CF0ED969B /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */; };
+		CB3BCFD41E93FB8C00A3D813 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCFD31E93FB8C00A3D813 /* API.swift */; };
+		CB3BCFD61E93FE7000A3D813 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCFD51E93FE7000A3D813 /* APITests.swift */; };
 		CB89AE5E1E93DE6400208E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */; };
 		CB89AE601E93DE6400208E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89AE5F1E93DE6400208E71 /* ViewController.swift */; };
 		CB89AE631E93DE6400208E71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE611E93DE6400208E71 /* Main.storyboard */; };
 		CB89AE651E93DE6400208E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE641E93DE6400208E71 /* Assets.xcassets */; };
 		CB89AE681E93DE6400208E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE661E93DE6400208E71 /* LaunchScreen.storyboard */; };
-		CB89AE731E93DE6400208E71 /* TKOSeatGeekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89AE721E93DE6400208E71 /* TKOSeatGeekTests.swift */; };
+		CBC9E7F31E94224900F52E05 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,9 @@
 		24C0511321364F3011B7D1BA /* Pods-TKOSeatGeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeekTests/Pods-TKOSeatGeekTests.release.xcconfig"; sourceTree = "<group>"; };
 		260A9CC797AD7EB6593A7D8C /* Pods-TKOSeatGeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeekTests/Pods-TKOSeatGeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 		537C8FBF358EAC80F862E8D7 /* Pods_TKOSeatGeekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E2988D8160462B601B20F72 /* Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CB3BCFD31E93FB8C00A3D813 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
+		CB3BCFD51E93FE7000A3D813 /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APITests.swift; path = API/APITests.swift; sourceTree = "<group>"; };
 		CB89AE5A1E93DE6400208E71 /* TKOSeatGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKOSeatGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB89AE5F1E93DE6400208E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +45,10 @@
 		CB89AE671E93DE6400208E71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB89AE691E93DE6400208E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB89AE6E1E93DE6400208E71 /* TKOSeatGeekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKOSeatGeekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB89AE721E93DE6400208E71 /* TKOSeatGeekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKOSeatGeekTests.swift; sourceTree = "<group>"; };
 		CB89AE741E93DE6400208E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequestTests.swift; path = API/APIRequestTests.swift; sourceTree = "<group>"; };
+		CF71451F2519AED3D02D65C4 /* Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; sourceTree = "<group>"; };
+		D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek_TKOSeatGeekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E010120934BE5C4876688B /* Pods_TKOSeatGeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8862F343E3ACDCAFDF43BA2 /* Pods-TKOSeatGeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek/Pods-TKOSeatGeek.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67EEA05B104CCACE4470DE17 /* Pods_TKOSeatGeekTests.framework in Frameworks */,
+				9F476C09F83FFA7CF0ED969B /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,7 @@
 			children = (
 				E0E010120934BE5C4876688B /* Pods_TKOSeatGeek.framework */,
 				537C8FBF358EAC80F862E8D7 /* Pods_TKOSeatGeekTests.framework */,
+				D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,8 +90,27 @@
 				F8862F343E3ACDCAFDF43BA2 /* Pods-TKOSeatGeek.release.xcconfig */,
 				260A9CC797AD7EB6593A7D8C /* Pods-TKOSeatGeekTests.debug.xcconfig */,
 				24C0511321364F3011B7D1BA /* Pods-TKOSeatGeekTests.release.xcconfig */,
+				5E2988D8160462B601B20F72 /* Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig */,
+				CF71451F2519AED3D02D65C4 /* Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB3BCFD11E93FB1800A3D813 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CB3BCFD31E93FB8C00A3D813 /* API.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		CB3BCFD21E93FB5C00A3D813 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CB3BCFD51E93FE7000A3D813 /* APITests.swift */,
+				CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		CB89AE511E93DE6400208E71 = {
@@ -109,6 +136,7 @@
 		CB89AE5C1E93DE6400208E71 /* TKOSeatGeek */ = {
 			isa = PBXGroup;
 			children = (
+				CB3BCFD11E93FB1800A3D813 /* API */,
 				CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */,
 				CB89AE5F1E93DE6400208E71 /* ViewController.swift */,
 				CB89AE611E93DE6400208E71 /* Main.storyboard */,
@@ -122,7 +150,7 @@
 		CB89AE711E93DE6400208E71 /* TKOSeatGeekTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB89AE721E93DE6400208E71 /* TKOSeatGeekTests.swift */,
+				CB3BCFD21E93FB5C00A3D813 /* API */,
 				CB89AE741E93DE6400208E71 /* Info.plist */,
 			);
 			path = TKOSeatGeekTests;
@@ -263,7 +291,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOSeatGeekTests/Pods-TKOSeatGeekTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		873BB15A153A351B1DFC0902 /* [CP] Embed Pods Frameworks */ = {
@@ -278,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOSeatGeekTests/Pods-TKOSeatGeekTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CB89AE7D1E93E38D00208E71 /* Run Swiftlint */ = {
@@ -348,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB89AE601E93DE6400208E71 /* ViewController.swift in Sources */,
+				CB3BCFD41E93FB8C00A3D813 /* API.swift in Sources */,
 				CB89AE5E1E93DE6400208E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +385,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB89AE731E93DE6400208E71 /* TKOSeatGeekTests.swift in Sources */,
+				CBC9E7F31E94224900F52E05 /* APIRequestTests.swift in Sources */,
+				CB3BCFD61E93FE7000A3D813 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,9 +541,8 @@
 		};
 		CB89AE7B1E93DE6400208E71 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 260A9CC797AD7EB6593A7D8C /* Pods-TKOSeatGeekTests.debug.xcconfig */;
+			baseConfigurationReference = 5E2988D8160462B601B20F72 /* Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOSeatGeekTests/Info.plist;
@@ -527,9 +556,8 @@
 		};
 		CB89AE7C1E93DE6400208E71 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24C0511321364F3011B7D1BA /* Pods-TKOSeatGeekTests.release.xcconfig */;
+			baseConfigurationReference = CF71451F2519AED3D02D65C4 /* Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOSeatGeekTests/Info.plist;
