@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: openresty
+Date: Tue, 04 Apr 2017 20:25:58 GMT
+Content-Type: application/json
+Content-Length: 483
+Connection: close
+Cache-Control: max-age=1800
+Access-Control-Allow-Origin: *
+Etag: "5c54d01987cb27fc111188876321533506a03ef5"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+{"extended_address":"Landover, MD 20785","slug":"fedex-field","location":{"lon":-76.8658,"lat":38.9071},"id":35,"state":"MD","name_v2":"FedEx Field","url":"https:\/\/seatgeek.com\/venues\/fedex-field\/tickets","timezone":"America\/New_York","score":0.954701,"country":"US","city":"Landover","display_location":"Landover, MD","stats":{"event_count":4},"address":"1600 Fedex Way","num_upcoming_events":4,"links":[],"has_upcoming_events":true,"postal_code":"20785","name":"FedEx Field"}

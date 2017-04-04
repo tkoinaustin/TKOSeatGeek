@@ -34,13 +34,9 @@ struct APIRequest {
   
   var body: String = "" { didSet {
     object.httpBody = body.data(using: .utf8)
-    }}
+  }}
   
-  init(
-    _ method: HTTPMethod,
-    path: String,
-    headers: [String : String] = [String: String]()
-    ) {
+  init(_ method: HTTPMethod, path: String, headers: [String : String] = [String: String]()) {
     let url = API.baseURL.appendingPathComponent(path)
     self.object = URLRequest(url: url)
     self.object.httpMethod = method.rawValue

@@ -1,0 +1,13 @@
+HTTP/1.1 200 OK
+Server: openresty
+Date: Tue, 04 Apr 2017 20:31:22 GMT
+Content-Type: application/json
+Content-Length: 854
+Connection: close
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=1800
+Etag: "cbe9760bfa64801c613c1064d18ad0026cfde258"
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+
+{"short_name":"SEC Championship","score":0.900847,"taxonomies":[{"name":"sports","id":1000000,"parent_id":null},{"name":"football","id":1020000,"parent_id":1000000},{"name":"ncaa_football","id":1020200,"parent_id":1020000}],"image":"https:\/\/chairnerd.global.ssl.fastly.net\/images\/performers-landscape\/sec-football-championship-152663\/9655\/huge.jpg","images":{"huge":"https:\/\/chairnerd.global.ssl.fastly.net\/images\/performers-landscape\/sec-football-championship-152663\/9655\/huge.jpg"},"image_license":null,"slug":"sec-football-championship","stats":{"event_count":0},"url":"https:\/\/seatgeek.com\/sec-football-championship-tickets","links":[],"colors":null,"type":"ncaa_football","divisions":null,"name":"SEC Football Championship","has_upcoming_events":false,"home_venue_id":null,"image_attribution":null,"id":9655,"num_upcoming_events":0}

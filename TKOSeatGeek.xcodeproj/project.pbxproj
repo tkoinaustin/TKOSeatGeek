@@ -17,6 +17,14 @@
 		CB89AE651E93DE6400208E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE641E93DE6400208E71 /* Assets.xcassets */; };
 		CB89AE681E93DE6400208E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE661E93DE6400208E71 /* LaunchScreen.storyboard */; };
 		CBC9E7F31E94224900F52E05 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */; };
+		CBC9E7F51E942BCB00F52E05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F41E942BCB00F52E05 /* Endpoints.swift */; };
+		CBC9E7F91E94349400F52E05 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F81E94349400F52E05 /* EndpointTests.swift */; };
+		CBC9E7FB1E94362800F52E05 /* events-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E7FA1E94362800F52E05 /* events-200.response */; };
+		CBC9E7FD1E9437DE00F52E05 /* event-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E7FC1E9437DE00F52E05 /* event-200.response */; };
+		CBC9E8001E94398100F52E05 /* venue-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E7FE1E94398100F52E05 /* venue-200.response */; };
+		CBC9E8011E94398100F52E05 /* venues-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E7FF1E94398100F52E05 /* venues-200.response */; };
+		CBC9E8041E943A4900F52E05 /* performer-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E8021E943A4900F52E05 /* performer-200.response */; };
+		CBC9E8051E943A4900F52E05 /* performers-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E8031E943A4900F52E05 /* performers-200.response */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		CB89AE6E1E93DE6400208E71 /* TKOSeatGeekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TKOSeatGeekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB89AE741E93DE6400208E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequestTests.swift; path = API/APIRequestTests.swift; sourceTree = "<group>"; };
+		CBC9E7F41E942BCB00F52E05 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = API/Endpoints.swift; sourceTree = "<group>"; };
+		CBC9E7F81E94349400F52E05 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointTests.swift; path = API/Endpoints/EndpointTests.swift; sourceTree = "<group>"; };
+		CBC9E7FA1E94362800F52E05 /* events-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "events-200.response"; path = "API/Responses/events-200.response"; sourceTree = "<group>"; };
+		CBC9E7FC1E9437DE00F52E05 /* event-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "event-200.response"; path = "API/Responses/event-200.response"; sourceTree = "<group>"; };
+		CBC9E7FE1E94398100F52E05 /* venue-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "venue-200.response"; path = "API/Responses/venue-200.response"; sourceTree = "<group>"; };
+		CBC9E7FF1E94398100F52E05 /* venues-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "venues-200.response"; path = "API/Responses/venues-200.response"; sourceTree = "<group>"; };
+		CBC9E8021E943A4900F52E05 /* performer-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "performer-200.response"; path = "API/Responses/performer-200.response"; sourceTree = "<group>"; };
+		CBC9E8031E943A4900F52E05 /* performers-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "performers-200.response"; path = "API/Responses/performers-200.response"; sourceTree = "<group>"; };
 		CF71451F2519AED3D02D65C4 /* Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek_TKOSeatGeekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E010120934BE5C4876688B /* Pods_TKOSeatGeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3BCFD31E93FB8C00A3D813 /* API.swift */,
+				CBC9E7F41E942BCB00F52E05 /* Endpoints.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -107,6 +124,8 @@
 		CB3BCFD21E93FB5C00A3D813 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CBC9E7F71E9433D300F52E05 /* Endpoints */,
+				CBC9E7F61E9433C900F52E05 /* Responses */,
 				CB3BCFD51E93FE7000A3D813 /* APITests.swift */,
 				CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */,
 			);
@@ -136,13 +155,13 @@
 		CB89AE5C1E93DE6400208E71 /* TKOSeatGeek */ = {
 			isa = PBXGroup;
 			children = (
-				CB3BCFD11E93FB1800A3D813 /* API */,
 				CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */,
-				CB89AE5F1E93DE6400208E71 /* ViewController.swift */,
-				CB89AE611E93DE6400208E71 /* Main.storyboard */,
 				CB89AE641E93DE6400208E71 /* Assets.xcassets */,
 				CB89AE661E93DE6400208E71 /* LaunchScreen.storyboard */,
 				CB89AE691E93DE6400208E71 /* Info.plist */,
+				CB3BCFD11E93FB1800A3D813 /* API */,
+				CB89AE5F1E93DE6400208E71 /* ViewController.swift */,
+				CB89AE611E93DE6400208E71 /* Main.storyboard */,
 			);
 			path = TKOSeatGeek;
 			sourceTree = "<group>";
@@ -154,6 +173,27 @@
 				CB89AE741E93DE6400208E71 /* Info.plist */,
 			);
 			path = TKOSeatGeekTests;
+			sourceTree = "<group>";
+		};
+		CBC9E7F61E9433C900F52E05 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				CBC9E8021E943A4900F52E05 /* performer-200.response */,
+				CBC9E8031E943A4900F52E05 /* performers-200.response */,
+				CBC9E7FE1E94398100F52E05 /* venue-200.response */,
+				CBC9E7FF1E94398100F52E05 /* venues-200.response */,
+				CBC9E7FC1E9437DE00F52E05 /* event-200.response */,
+				CBC9E7FA1E94362800F52E05 /* events-200.response */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
+		CBC9E7F71E9433D300F52E05 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				CBC9E7F81E94349400F52E05 /* EndpointTests.swift */,
+			);
+			name = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +298,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBC9E8041E943A4900F52E05 /* performer-200.response in Resources */,
+				CBC9E8001E94398100F52E05 /* venue-200.response in Resources */,
+				CBC9E8051E943A4900F52E05 /* performers-200.response in Resources */,
+				CBC9E8011E94398100F52E05 /* venues-200.response in Resources */,
+				CBC9E7FD1E9437DE00F52E05 /* event-200.response in Resources */,
+				CBC9E7FB1E94362800F52E05 /* events-200.response in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +423,7 @@
 			files = (
 				CB89AE601E93DE6400208E71 /* ViewController.swift in Sources */,
 				CB3BCFD41E93FB8C00A3D813 /* API.swift in Sources */,
+				CBC9E7F51E942BCB00F52E05 /* Endpoints.swift in Sources */,
 				CB89AE5E1E93DE6400208E71 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC9E7F31E94224900F52E05 /* APIRequestTests.swift in Sources */,
+				CBC9E7F91E94349400F52E05 /* EndpointTests.swift in Sources */,
 				CB3BCFD61E93FE7000A3D813 /* APITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
