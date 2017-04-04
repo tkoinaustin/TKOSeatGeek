@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '10.0'
+
+target 'TKOSeatGeek' do
+  use_frameworks!
+
+  pod 'SwiftyJSON'
+  pod 'PromiseKit/CorePromise'
+
+  target 'TKOSeatGeekTests' do
+    inherit! :search_paths
+  end
+
+end
