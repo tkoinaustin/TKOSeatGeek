@@ -141,6 +141,7 @@
 				CB89AE581E93DE6400208E71 /* Resources */,
 				EACAD47713324ECF5AD5B4FC /* [CP] Embed Pods Frameworks */,
 				EEED5BFE6B67347A73FC9DB1 /* [CP] Copy Pods Resources */,
+				CB89AE7D1E93E38D00208E71 /* Run Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -279,6 +280,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TKOSeatGeekTests/Pods-TKOSeatGeekTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CB89AE7D1E93E38D00208E71 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		DA58C892BFA5DF32B73FCE4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -545,6 +560,7 @@
 				CB89AE791E93DE6400208E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB89AE7A1E93DE6400208E71 /* Build configuration list for PBXNativeTarget "TKOSeatGeekTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +569,7 @@
 				CB89AE7C1E93DE6400208E71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
