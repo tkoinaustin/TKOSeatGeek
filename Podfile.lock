@@ -1,0 +1,36 @@
+PODS:
+  - OHHTTPStubs (5.2.3):
+    - OHHTTPStubs/Default (= 5.2.3)
+  - OHHTTPStubs/Core (5.2.3)
+  - OHHTTPStubs/Default (5.2.3):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/HTTPMessage (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/JSON (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.3):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.3)
+  - OHHTTPStubs/Swift (5.2.3):
+    - OHHTTPStubs/Core
+  - PromiseKit/CorePromise (4.1.7)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - OHHTTPStubs
+  - OHHTTPStubs/HTTPMessage
+  - OHHTTPStubs/Swift
+  - PromiseKit/CorePromise
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 19e5411075e7aba7e8b1163d8bfdc7b7b7ed5230
+
+COCOAPODS: 1.2.0.rc.1

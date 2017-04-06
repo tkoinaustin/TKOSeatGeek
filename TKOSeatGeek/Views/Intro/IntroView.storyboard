@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OU2-4P-Fwl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="E7P-zh-CKw">
+            <objects>
+                <viewController id="OU2-4P-Fwl" customClass="IntroViewController" customModule="TKOSeatGeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0JY-oC-vkW"/>
+                        <viewControllerLayoutGuide type="bottom" id="0vx-qB-QJA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="owv-7Q-VHV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-LP-fm7">
+                                <rect key="frame" x="136" y="399" width="88" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Continue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9m-0JA">
+                                <rect key="frame" x="83" y="211" width="222" height="156"/>
+                                <string key="text">Use the power of SeatGeek to find all your favorite teams and entertainers, see where and when they are playing, and get tickets for the shows and games.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TKO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-4Y-gNJ">
+                                <rect key="frame" x="143" y="-31" width="178" height="85"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRg-5n-Etd">
+                                <rect key="frame" x="143" y="62" width="178" height="101"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Geek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-Qh-uiT">
+                                <rect key="frame" x="142" y="171" width="180" height="101"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LRg-5n-Etd" firstAttribute="centerY" secondItem="owv-7Q-VHV" secondAttribute="centerY" id="7fl-BM-n1J"/>
+                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="centerY" secondItem="owv-7Q-VHV" secondAttribute="centerY" id="F1h-pE-pMo"/>
+                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="Is2-C4-ypw"/>
+                            <constraint firstItem="LRg-5n-Etd" firstAttribute="top" secondItem="H3E-4Y-gNJ" secondAttribute="bottom" id="PWw-Qb-NVM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qf0-9m-0JA" secondAttribute="trailing" constant="50" id="RgT-Dj-qXM"/>
+                            <constraint firstItem="Ofw-Qh-uiT" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="Wpa-FD-lFq"/>
+                            <constraint firstItem="3l1-LP-fm7" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="XU3-Jv-2NA"/>
+                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="leading" secondItem="owv-7Q-VHV" secondAttribute="leadingMargin" constant="50" id="jBE-u4-VgW"/>
+                            <constraint firstItem="H3E-4Y-gNJ" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="k9q-OC-NFc"/>
+                            <constraint firstItem="Ofw-Qh-uiT" firstAttribute="top" secondItem="LRg-5n-Etd" secondAttribute="bottom" id="nar-Aw-9UC"/>
+                            <constraint firstItem="LRg-5n-Etd" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="qd0-VR-67K"/>
+                            <constraint firstItem="3l1-LP-fm7" firstAttribute="top" secondItem="Qf0-9m-0JA" secondAttribute="bottom" constant="32" id="zVB-bN-eSw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Ofw-Qh-uiT" id="pcx-Jz-N48"/>
+                        <outlet property="continueButton" destination="3l1-LP-fm7" id="lgR-iq-Tac"/>
+                        <outlet property="instructionsLabel" destination="Qf0-9m-0JA" id="P1L-JH-FpA"/>
+                        <outlet property="middleLabel" destination="LRg-5n-Etd" id="AbL-pI-tC5"/>
+                        <outlet property="topLabel" destination="H3E-4Y-gNJ" id="cqC-H8-MEP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gra-1z-0Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-127.2" y="-77.811094452773617"/>
+        </scene>
+    </scenes>
+</document>
