@@ -26,6 +26,9 @@
                                 <rect key="frame" x="136" y="399" width="88" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Continue"/>
+                                <connections>
+                                    <segue destination="4WH-fn-3VM" kind="show" id="whK-uo-ZIQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9m-0JA">
                                 <rect key="frame" x="83" y="211" width="222" height="156"/>
@@ -80,6 +83,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gra-1z-0Vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-127.2" y="-77.811094452773617"/>
+        </scene>
+        <!--SearchView-->
+        <scene sceneID="RNM-If-Lhd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchView" id="4WH-fn-3VM" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2WG-cY-7Jk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="-78"/>
         </scene>
     </scenes>
 </document>

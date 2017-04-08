@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jPZ-zA-pSz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="iHy-FV-gpb">
+            <objects>
+                <viewController id="jPZ-zA-pSz" customClass="SearchViewController" customModule="TKOSeatGeek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nh3-b3-FI5"/>
+                        <viewControllerLayoutGuide type="bottom" id="TwP-Mo-w6H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e1e-BI-xBS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-Hj-3UH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-mS-nL8">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YTD-Hj-3UH" firstAttribute="top" secondItem="nh3-b3-FI5" secondAttribute="bottom" id="2AH-cm-EZP"/>
+                            <constraint firstItem="vwn-mS-nL8" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="6Yx-nw-wA9"/>
+                            <constraint firstAttribute="trailing" secondItem="vwn-mS-nL8" secondAttribute="trailing" id="F7p-nk-pC0"/>
+                            <constraint firstItem="vwn-mS-nL8" firstAttribute="top" secondItem="YTD-Hj-3UH" secondAttribute="bottom" id="I2m-AV-z7C"/>
+                            <constraint firstAttribute="trailing" secondItem="YTD-Hj-3UH" secondAttribute="trailing" id="idE-hp-pGb"/>
+                            <constraint firstItem="YTD-Hj-3UH" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="jFz-8W-6vo"/>
+                            <constraint firstItem="TwP-Mo-w6H" firstAttribute="top" secondItem="vwn-mS-nL8" secondAttribute="bottom" id="tSa-mC-Wtq"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="TrS-Jr-IfC" id="XR8-11-9br"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6B-nJ-vcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="TrS-Jr-IfC">
+                    <connections>
+                        <outlet property="delegate" destination="jPZ-zA-pSz" id="XJ2-DZ-fsK"/>
+                        <outlet property="searchContentsController" destination="jPZ-zA-pSz" id="xbG-UX-fdp"/>
+                        <outlet property="searchResultsDataSource" destination="jPZ-zA-pSz" id="OdL-23-PBO"/>
+                        <outlet property="searchResultsDelegate" destination="jPZ-zA-pSz" id="gkr-Qu-jGa"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="-28" y="19.340329835082461"/>
+        </scene>
+    </scenes>
+</document>
