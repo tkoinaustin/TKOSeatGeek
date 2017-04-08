@@ -12,18 +12,18 @@ import OHHTTPStubs
 @testable import TKOSeatGeek
 
 class APITests: XCTestCase {
-  var smokeRequest: APIRequest { return APIRequest(.get, path: "/smoke") }
-  let originalURL = API.baseURL
-  
+  var smokeRequest: APIRequest { return APIRequest(.get, path: "/smoke", query: "") }
+  let originalURL = API.urlComponents
+
   override func setUp() {
-    API.baseURL = URL(string: "https://example.com")!
+    API.urlComponents = URLComponents(string: "https://example.com")!
     API.session = URLSession.shared
     super.setUp()
   }
   
   override func tearDown() {
     OHHTTPStubs.removeAllStubs()
-    API.baseURL = originalURL
+    API.urlComponents = originalURL
     super.tearDown()
   }
   

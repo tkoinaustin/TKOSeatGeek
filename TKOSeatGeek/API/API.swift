@@ -36,8 +36,10 @@ struct APIRequest {
     object.httpBody = body.data(using: .utf8)
   }}
   
-  init(_ method: HTTPMethod, path: String, headers: [String : String] = [String: String]()) {
-    let url = API.baseURL.appendingPathComponent(path)
+  init(_ method: HTTPMethod, path: String, query: String, headers: [String : String] = [String: String]()) {
+    API.urlComponents.path = path
+    API.urlComponents.query = query
+    let url = API.urlComponents.url!
     self.object = URLRequest(url: url)
     self.object.httpMethod = method.rawValue
     self.object.httpBody = body.data(using: .utf8)
@@ -49,9 +51,10 @@ struct APIRequest {
 }
 
 class API {
-  static var baseURL = URL(string: "https://api.seatgeek.com/2/")!
-  
-  static var session = URLSession()
+  static var urlComponents = URLComponents(string: "https://api.seatgeek.com/2")!
+  static let clientId = "NzIyNDM5OHwxNDkxMjQyOTI0LjAx"
+
+  static var session = URLSession.shared
   
   static func fire(_ request: APIRequest) -> Promise<APIResponse> {
     

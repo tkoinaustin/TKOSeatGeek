@@ -12,17 +12,17 @@ import OHHTTPStubs
 @testable import TKOSeatGeek
 
 class EndpointTests: XCTestCase {
-  let originalURL = API.baseURL
+  let originalURL = API.urlComponents
   
   override func setUp() {
-    API.baseURL = URL(string: "https://example.com")!
+    API.urlComponents = URLComponents(string: "https://example.com")!
     API.session = URLSession.shared
     super.setUp()
   }
   
   override func tearDown() {
     OHHTTPStubs.removeAllStubs()
-    API.baseURL = originalURL
+    API.urlComponents = originalURL
     super.tearDown()
   }
   
@@ -35,7 +35,7 @@ class EndpointTests: XCTestCase {
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
     }
     
-    Endpoints.events().then { response -> Void in
+    Endpoints.events(searchString: "word", resultSize: "10", page: "1").then { response -> Void in
       XCTAssertNotNil(response.body.dictionary)
       async.fulfill()
       }.catch { _ in }

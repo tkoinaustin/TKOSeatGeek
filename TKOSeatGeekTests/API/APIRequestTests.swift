@@ -11,16 +11,16 @@ import XCTest
 @testable import TKOSeatGeek
 
 class APIRequestTests: XCTestCase {
-  let originalURL = API.baseURL
+  let originalURL = API.urlComponents
   
   override func setUp() {
-    API.baseURL = URL(string: "https://unittest.com")!
+    API.urlComponents = URLComponents(string: "https://unittest.com")!
     API.session = URLSession.shared
     super.setUp()
   }
   
   override func tearDown() {
-    API.baseURL = originalURL
+    API.urlComponents = originalURL
     super.tearDown()
   }
   
@@ -28,6 +28,7 @@ class APIRequestTests: XCTestCase {
     var req = APIRequest(
       .post,
       path: "/hi/what",
+      query: "",
       headers: [
         "one": "two",
         "three": "four"
@@ -46,6 +47,6 @@ class APIRequestTests: XCTestCase {
     
     let url = URL(string: "https://unittest.com/hi/what")
     
-    XCTAssertEqual(req.object.url, url)
+    XCTAssertEqual(req.object.url!, url)
   }
 }

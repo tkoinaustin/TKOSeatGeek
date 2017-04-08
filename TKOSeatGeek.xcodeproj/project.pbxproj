@@ -19,6 +19,8 @@
 		CBBE7D7A1E96AA5D00968DCF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7D791E96AA5D00968DCF /* SearchViewController.swift */; };
 		CBBE7D7C1E96AA7600968DCF /* SearchView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBBE7D7B1E96AA7600968DCF /* SearchView.storyboard */; };
 		CBBE7D7E1E99023F00968DCF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7D7D1E99023F00968DCF /* SearchViewModel.swift */; };
+		CBBE7D811E990E1800968DCF /* EventSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7D801E990E1800968DCF /* EventSet.swift */; };
+		CBBE7D831E99104500968DCF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBE7D821E99104500968DCF /* Event.swift */; };
 		CBC9E7F31E94224900F52E05 /* APIRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */; };
 		CBC9E7F51E942BCB00F52E05 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F41E942BCB00F52E05 /* Endpoints.swift */; };
 		CBC9E7F91E94349400F52E05 /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC9E7F81E94349400F52E05 /* EndpointTests.swift */; };
@@ -60,6 +62,8 @@
 		CBBE7D791E96AA5D00968DCF /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Views/Search/SearchViewController.swift; sourceTree = "<group>"; };
 		CBBE7D7B1E96AA7600968DCF /* SearchView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SearchView.storyboard; path = Views/Search/SearchView.storyboard; sourceTree = "<group>"; };
 		CBBE7D7D1E99023F00968DCF /* SearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		CBBE7D801E990E1800968DCF /* EventSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSet.swift; path = Models/EventSet.swift; sourceTree = "<group>"; };
+		CBBE7D821E99104500968DCF /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Models/Event.swift; sourceTree = "<group>"; };
 		CBC9E7F21E94224900F52E05 /* APIRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIRequestTests.swift; path = API/APIRequestTests.swift; sourceTree = "<group>"; };
 		CBC9E7F41E942BCB00F52E05 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Endpoints.swift; path = API/Endpoints.swift; sourceTree = "<group>"; };
 		CBC9E7F81E94349400F52E05 /* EndpointTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EndpointTests.swift; path = API/Endpoints/EndpointTests.swift; sourceTree = "<group>"; };
@@ -165,6 +169,7 @@
 				CB89AE641E93DE6400208E71 /* Assets.xcassets */,
 				CB89AE691E93DE6400208E71 /* Info.plist */,
 				CB3BCFD11E93FB1800A3D813 /* API */,
+				CBBE7D7F1E990AF900968DCF /* Models */,
 				CBBE7D721E96762900968DCF /* Views */,
 			);
 			path = TKOSeatGeek;
@@ -206,6 +211,15 @@
 				CBBE7D7B1E96AA7600968DCF /* SearchView.storyboard */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		CBBE7D7F1E990AF900968DCF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBBE7D801E990E1800968DCF /* EventSet.swift */,
+				CBBE7D821E99104500968DCF /* Event.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		CBC9E7F61E9433C900F52E05 /* Responses */ = {
@@ -455,7 +469,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBBE7D831E99104500968DCF /* Event.swift in Sources */,
 				CBBE7D7E1E99023F00968DCF /* SearchViewModel.swift in Sources */,
+				CBBE7D811E990E1800968DCF /* EventSet.swift in Sources */,
 				CBBE7D7A1E96AA5D00968DCF /* SearchViewController.swift in Sources */,
 				CBBE7D771E9676DC00968DCF /* IntroViewController.swift in Sources */,
 				CB3BCFD41E93FB8C00A3D813 /* API.swift in Sources */,

@@ -10,8 +10,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
   
+  let viewModel = SearchViewModel()
+  
   override func viewDidLoad() {
-
+    viewModel.searchString = "Texas"
   }
   
 }

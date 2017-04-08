@@ -7,6 +7,22 @@
 //
 
 import UIKit
+import SwiftyJSON
+import PromiseKit
+
 class SearchViewModel {
   
+  var searchString: String = "" { didSet {
+      //search
+    _ = self.load(searchString)
+  }}
+  
+  func load(_ searchString: String) -> Promise<Void> {
+    return EventSet.load(searchString).then { results -> Promise<Void> in
+      print(results)
+      return Promise {fulfill, _ in
+        fulfill()
+      }
+    }
+  }
 }
