@@ -11,6 +11,7 @@ import SwiftyJSON
 import PromiseKit
 
 class SearchViewModel {
+  var results: EventSet!
   
   var searchString: String = "" { didSet {
       //search
@@ -20,6 +21,7 @@ class SearchViewModel {
   func load(_ searchString: String) -> Promise<Void> {
     return EventSet.load(searchString).then { results -> Promise<Void> in
       print(results)
+      self.results = results
       return Promise {fulfill, _ in
         fulfill()
       }
