@@ -20,7 +20,7 @@ class Endpoints {
   
     func path() -> String {
       switch self {
-      case .events(query: let query, size: let size, page: let page): return "/events"
+      case .events(query: let query, size: let size, page: let page): return "/2/events"
       case .event(id: let id): return "/events/\(id)"
       case .venues: return "/venues"
       case .venue(id: let id): return "/venues/\(id)"
@@ -31,7 +31,7 @@ class Endpoints {
     
     func query() -> String {
       switch self {
-      case .events(query: let query, size: let size, page: let page): return "q=\(query)&page=\(page)&client_id=\(API.clientId)"
+      case .events(query: let query, size: let size, page: let page): return "q=\(query)&page=\(page)&per_page=\(size)&client_id=\(API.clientId)"
       default: return "client_id=\(API.clientId)"
       }
     }

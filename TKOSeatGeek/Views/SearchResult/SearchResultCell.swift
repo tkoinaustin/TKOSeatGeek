@@ -11,9 +11,11 @@ import UIKit
 class SearchResultCell: UITableViewCell {
 //  weak var content: Event!
   
-  @IBOutlet weak var mainImage: UIImageView!
+  @IBOutlet weak var mainImage: UIImageView! { didSet {
+    mainImage.layer.cornerRadius = 6.5
+    mainImage.clipsToBounds = true
+  }}
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var locationLabel: UILabel!
   @IBOutlet weak var dateLabel: UILabel!
-  
 }

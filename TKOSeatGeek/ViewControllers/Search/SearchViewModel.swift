@@ -10,18 +10,26 @@ import UIKit
 import SwiftyJSON
 import PromiseKit
 
-class SearchViewModel {
+class SearchViewModel: NSObject {
   var results: EventSet!
+  var events = [Event]()
+  var updateUI: (() -> Void) = { }
   
   var searchString: String = "" { didSet {
-      //search
-    _ = self.load(searchString)
+    if searchString == "" {
+      events.removeAll()
+      updateUI()
+    } else {
+      _ = self.load(searchString)
+    }
   }}
   
   func load(_ searchString: String) -> Promise<Void> {
     return EventSet.load(searchString).then { results -> Promise<Void> in
       print(results)
       self.results = results
+      self.events = results.events
+      self.updateUI()
       return Promise {fulfill, _ in
         fulfill()
       }

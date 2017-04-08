@@ -15,12 +15,14 @@ class Event {
   let title: String
   let location: String
   let startDate: String
+  let imageUrl: URL?
   
   init?(
     id: Int?,
     title: String?,
     location: String?,
-    startDate: String?
+    startDate: String?,
+    imageString: String?
     ) {
     guard let id = id else { return nil }
     self.id = id
@@ -33,5 +35,8 @@ class Event {
     
     guard let startDate = startDate else { return nil }
     self.startDate = startDate
+    
+    if imageString == nil { self.imageUrl = nil}
+    else { self.imageUrl = URL(string: imageString!) }
   }
 }
