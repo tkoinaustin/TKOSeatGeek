@@ -31,6 +31,8 @@ class SearchViewController: UIViewController {
     provider.registerCells(for: self.tableView)
     tableView.estimatedRowHeight = 100
     tableView.rowHeight = UITableViewAutomaticDimension
+    
+    self.navigationController?.isNavigationBarHidden = true
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

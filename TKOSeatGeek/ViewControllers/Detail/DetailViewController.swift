@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
   
   
   @IBAction func dismissAction(_ sender: UIButton) {
-    dismiss(animated: true, completion: nil)
+    navigationController?.popViewController(animated: true)
   }
   
   func setup(_ event: Event, image: UIImage?) {
