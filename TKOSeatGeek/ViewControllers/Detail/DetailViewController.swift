@@ -10,4 +10,39 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
+  var event: Event!  
+  var image: UIImage?
+  
+  @IBOutlet weak var mainImage: UIImageView! { didSet {
+    mainImage.layer.cornerRadius = 6.5
+    mainImage.clipsToBounds = true
+    mainImage.image = image
+  }}
+  
+  @IBOutlet weak var startDate: UILabel! { didSet {
+      startDate.text = event?.startDate
+  }}
+  
+  @IBOutlet weak var location: UILabel! { didSet {
+      location.text = event?.location
+  }}
+  
+  @IBOutlet weak var eventName: UILabel! { didSet {
+    eventName.text = event?.title
+  }}
+
+  @IBOutlet weak var toggleLike: UIButton!
+  
+  @IBAction func toggleLikeAction(_ sender: UIButton) {
+  }
+  
+  
+  @IBAction func dismissAction(_ sender: UIButton) {
+    dismiss(animated: true, completion: nil)
+  }
+  
+  func setup(_ event: Event, image: UIImage?) {
+    self.event = event
+    self.image = image
+  }
 }

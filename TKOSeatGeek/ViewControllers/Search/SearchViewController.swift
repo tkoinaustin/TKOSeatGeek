@@ -33,11 +33,23 @@ class SearchViewController: UIViewController {
     tableView.rowHeight = UITableViewAutomaticDimension
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    // make sure we have everything we need to perform segue
+    guard let detailViewController = segue.destination as? DetailViewController else { return }
+    guard let indexPath = sender as? IndexPath else { return }
+
+    let image = (tableView.cellForRow(at: indexPath) as? SearchResultCell)?.mainImage.image
+    let eventData = viewModel.events[indexPath.row]
+    detailViewController.setup(eventData, image: image)
+  }
 }
 
 extension SearchViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     self.searchBar.endEditing(true)
+    DispatchQueue.main.async {
+      self.performSegue(withIdentifier: "detailViewSegue", sender: indexPath)
+    }
   }
 }
 
@@ -45,14 +57,9 @@ extension SearchViewController: UISearchBarDelegate {
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     viewModel.searchString = searchText
-    if searchText == "" { self.searchBar.endEditing(true) }
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    searchBar.endEditing(true)
-  }
-  
-  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     searchBar.endEditing(true)
   }
 }

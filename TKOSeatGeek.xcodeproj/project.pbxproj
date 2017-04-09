@@ -215,9 +215,9 @@
 		CBBE7D721E96762900968DCF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CBF793741E99B52D00EF6FF6 /* Detail */,
 				CBBE7D731E96764900968DCF /* Intro */,
 				CBBE7D781E96A97C00968DCF /* Search */,
+				CBF793741E99B52D00EF6FF6 /* Detail */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

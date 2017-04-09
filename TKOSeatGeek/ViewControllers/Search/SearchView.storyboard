@@ -48,6 +48,7 @@
                         <outlet property="searchBar" destination="YTD-Hj-3UH" id="jtz-tf-X4w"/>
                         <outlet property="searchDisplayController" destination="TrS-Jr-IfC" id="XR8-11-9br"/>
                         <outlet property="tableView" destination="vwn-mS-nL8" id="UUh-Ex-eA0"/>
+                        <segue destination="O4E-90-BTX" kind="show" identifier="detailViewSegue" id="47D-10-Jmf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6B-nJ-vcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,6 +62,14 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-28" y="19.340329835082461"/>
+        </scene>
+        <!--DetailView-->
+        <scene sceneID="89F-p2-Taf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailView" id="O4E-90-BTX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFp-Y6-DSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590" y="19"/>
         </scene>
     </scenes>
 </document>
