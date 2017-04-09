@@ -35,7 +35,7 @@ class SearchDataProvider: NSObject, UITableViewDataSource {
       cell.titleLabel.text = event.title
       cell.locationLabel.text = event.location
       cell.dateLabel.text = event.startDate
-      loadImage(from: event.imageUrl).then { image -> Void in
+      _ = loadImage(from: event.imageUrl).then { image -> Void in
         cell.mainImage.image = image
       }
     }

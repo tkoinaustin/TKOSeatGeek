@@ -53,7 +53,7 @@ struct APIRequest {
 }
 
 class API {
-  static var urlComponents = URLComponents(string: "https://api.seatgeek.com/2")!
+  static var urlComponents = URLComponents(string: "https://api.seatgeek.com")!
   static let clientId = "NzIyNDM5OHwxNDkxMjQyOTI0LjAx"
 
   static var session = URLSession.shared

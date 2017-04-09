@@ -45,7 +45,7 @@ class APIRequestTests: XCTestCase {
     XCTAssertEqual(headers?["one"], "two")
     XCTAssertEqual(headers?["three"], "four")
     
-    let url = URL(string: "https://unittest.com/hi/what")
+    let url = API.urlComponents.url!
     
     XCTAssertEqual(req.object.url!, url)
   }

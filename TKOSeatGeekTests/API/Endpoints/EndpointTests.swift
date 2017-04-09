@@ -29,7 +29,7 @@ class EndpointTests: XCTestCase {
   func testEvents200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/events")) { _ in
+    stub(condition: isPath("/2/events")) { _ in
       let path = OHPathForFileInBundle("events-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
@@ -46,7 +46,7 @@ class EndpointTests: XCTestCase {
   func testEvent200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/events/3524773")) { _ in
+    stub(condition: isPath("/2/events/3524773")) { _ in
       let path = OHPathForFileInBundle("event-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
@@ -63,7 +63,7 @@ class EndpointTests: XCTestCase {
   func testVenues200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/venues")) { _ in
+    stub(condition: isPath("/2/venues")) { _ in
       let path = OHPathForFileInBundle("venues-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
@@ -80,7 +80,7 @@ class EndpointTests: XCTestCase {
   func testVenue200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/venues/35")) { _ in
+    stub(condition: isPath("/2/venues/35")) { _ in
       let path = OHPathForFileInBundle("venue-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
@@ -97,7 +97,7 @@ class EndpointTests: XCTestCase {
   func testPerformers200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/performers")) { _ in
+    stub(condition: isPath("/2/performers")) { _ in
       let path = OHPathForFileInBundle("performers-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)
@@ -114,7 +114,7 @@ class EndpointTests: XCTestCase {
   func testPerformer200() {
     let async = expectation(description: "async")
     
-    stub(condition: isPath("/performers/9655")) { _ in
+    stub(condition: isPath("/2/performers/9655")) { _ in
       let path = OHPathForFileInBundle("performer-200.response", Bundle(for: type(of: self)))!
       let raw = try? String(contentsOfFile: path)
       return OHHTTPStubsResponse(httpMessageData: raw!.data(using: .utf8)!)

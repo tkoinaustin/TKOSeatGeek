@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
   
   @IBAction func dismissAction(_ sender: UIButton) {
     updateTableViewCell()
-    navigationController?.popViewController(animated: true)
+    _ = navigationController?.popViewController(animated: true)
   }
   
   func setup(_ event: Event, image: UIImage?) {

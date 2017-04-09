@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,54 +21,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-LP-fm7">
-                                <rect key="frame" x="136" y="399" width="88" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Continue"/>
-                                <connections>
-                                    <segue destination="4WH-fn-3VM" kind="show" id="whK-uo-ZIQ"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9m-0JA">
-                                <rect key="frame" x="83" y="211" width="222" height="156"/>
-                                <string key="text">Use the power of SeatGeek to find all your favorite teams and entertainers, see where and when they are playing, and get tickets for the shows and games.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TKO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-4Y-gNJ">
-                                <rect key="frame" x="143" y="-31" width="178" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TKO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-4Y-gNJ">
+                                <rect key="frame" x="109" y="182" width="157" height="101"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Seat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRg-5n-Etd">
-                                <rect key="frame" x="143" y="62" width="178" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRg-5n-Etd">
+                                <rect key="frame" x="115.5" y="283" width="144" height="101"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Geek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-Qh-uiT">
-                                <rect key="frame" x="142" y="171" width="180" height="101"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geek" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-Qh-uiT">
+                                <rect key="frame" x="98" y="384" width="179.5" height="101"/>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="72"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HMt-T5-T1r">
+                                <rect key="frame" x="50" y="178.5" width="275" height="310.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9m-0JA">
+                                        <rect key="frame" x="4" y="0.0" width="267" height="229.5"/>
+                                        <string key="text">Use the power of SeatGeek to find all your favorite teams and entertainers, see where and when they are playing, and get tickets for the shows and games.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-LP-fm7">
+                                        <rect key="frame" x="89" y="269.5" width="97" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <segue destination="4WH-fn-3VM" kind="show" id="whK-uo-ZIQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.27450980390000002" green="0.47450980390000003" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LRg-5n-Etd" firstAttribute="centerY" secondItem="owv-7Q-VHV" secondAttribute="centerY" id="7fl-BM-n1J"/>
-                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="centerY" secondItem="owv-7Q-VHV" secondAttribute="centerY" id="F1h-pE-pMo"/>
-                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="Is2-C4-ypw"/>
                             <constraint firstItem="LRg-5n-Etd" firstAttribute="top" secondItem="H3E-4Y-gNJ" secondAttribute="bottom" id="PWw-Qb-NVM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qf0-9m-0JA" secondAttribute="trailing" constant="50" id="RgT-Dj-qXM"/>
+                            <constraint firstItem="HMt-T5-T1r" firstAttribute="leading" secondItem="owv-7Q-VHV" secondAttribute="leading" constant="50" id="Rmk-fo-M0H"/>
                             <constraint firstItem="Ofw-Qh-uiT" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="Wpa-FD-lFq"/>
-                            <constraint firstItem="3l1-LP-fm7" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="XU3-Jv-2NA"/>
-                            <constraint firstItem="Qf0-9m-0JA" firstAttribute="leading" secondItem="owv-7Q-VHV" secondAttribute="leadingMargin" constant="50" id="jBE-u4-VgW"/>
+                            <constraint firstItem="HMt-T5-T1r" firstAttribute="centerY" secondItem="owv-7Q-VHV" secondAttribute="centerY" id="dGr-Ls-t44"/>
+                            <constraint firstAttribute="trailing" secondItem="HMt-T5-T1r" secondAttribute="trailing" constant="50" id="gcz-mC-gd2"/>
                             <constraint firstItem="H3E-4Y-gNJ" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="k9q-OC-NFc"/>
                             <constraint firstItem="Ofw-Qh-uiT" firstAttribute="top" secondItem="LRg-5n-Etd" secondAttribute="bottom" id="nar-Aw-9UC"/>
                             <constraint firstItem="LRg-5n-Etd" firstAttribute="centerX" secondItem="owv-7Q-VHV" secondAttribute="centerX" id="qd0-VR-67K"/>
-                            <constraint firstItem="3l1-LP-fm7" firstAttribute="top" secondItem="Qf0-9m-0JA" secondAttribute="bottom" constant="32" id="zVB-bN-eSw"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

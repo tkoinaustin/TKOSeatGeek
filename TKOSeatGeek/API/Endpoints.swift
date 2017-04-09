@@ -20,12 +20,12 @@ class Endpoints {
   
     func path() -> String {
       switch self {
-      case .events(query: let query, size: let size, page: let page): return "/2/events"
-      case .event(id: let id): return "/events/\(id)"
-      case .venues: return "/venues"
-      case .venue(id: let id): return "/venues/\(id)"
-      case .performers: return "/performers"
-      case .performer(id: let id): return "/performers/\(id)"
+      case .events(query: _, size: _, page: _): return "/2/events"
+      case .event(id: let id): return "/2/events/\(id)"
+      case .venues: return "/2/venues"
+      case .venue(id: let id): return "/2/venues/\(id)"
+      case .performers: return "/2/performers"
+      case .performer(id: let id): return "/2/performers/\(id)"
       }
     }
     
