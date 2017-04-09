@@ -9,6 +9,7 @@
 import Foundation
 import PromiseKit
 import SwiftyJSON
+import ReachabilitySwift
 
 struct APIResponse {
   let raw: HTTPURLResponse
@@ -27,6 +28,7 @@ enum APIError: Error {
   case body
   case request
   case server
+  case reachability
 }
 
 struct APIRequest {
@@ -59,6 +61,8 @@ class API {
   static func fire(_ request: APIRequest) -> Promise<APIResponse> {
     
     return Promise<APIResponse> { fulfill, reject in
+      guard (Reachability.init()?.isReachable)! else { return reject(APIError.reachability) }
+      
       session.dataTask(with: request.object) { data, response, error in
         
         if let error = error { return reject(error) }

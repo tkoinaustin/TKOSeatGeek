@@ -6,6 +6,7 @@ target 'TKOSeatGeek' do
 
   pod 'SwiftyJSON'
   pod 'PromiseKit/CorePromise'
+  pod 'ReachabilitySwift'
 
   target 'TKOSeatGeekTests' do
     pod 'OHHTTPStubs'

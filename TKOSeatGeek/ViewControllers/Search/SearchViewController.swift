@@ -22,6 +22,7 @@ class SearchViewController: UIViewController {
   
   override func viewDidLoad() {
     viewModel.updateUI = { self.tableView.reloadData() }
+    viewModel.showError = showConnectionProblems
     provider.viewModel = viewModel
     provider.registerCells(for: self.tableView)
 
@@ -43,6 +44,15 @@ class SearchViewController: UIViewController {
     let eventData = viewModel.events[indexPath.row]
     detailViewController.updateTableViewCell = { self.tableView.reloadRows(at: [indexPath], with: .fade) }
     detailViewController.setup(eventData, image: image)
+  }
+  
+  func showConnectionProblems(_ desc: String) {
+    let alertViewController = UIAlertController(title: "Error", message: desc, preferredStyle: .alert)
+    let action = UIAlertAction(title: "OK", style: .cancel)
+    alertViewController.addAction(action)
+    
+    self.searchBar.endEditing(true)
+    self.present(alertViewController,animated: true)
   }
 }
 

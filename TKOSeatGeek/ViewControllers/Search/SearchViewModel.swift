@@ -14,6 +14,7 @@ class SearchViewModel: NSObject {
   var results: EventSet!
   var events = [Event]()
   var updateUI: (() -> Void) = { }
+  var showError:((String) -> Void) = { _ in }
   
   var searchString: String = "" { didSet {
     if searchString == "" {
@@ -32,7 +33,10 @@ class SearchViewModel: NSObject {
       self.updateUI()
       return Promise {fulfill, _ in
         fulfill()
-      }
+        }
+      }.catch { error in
+        print("load error: \(error.localizedDescription)")
+        self.showError(error.localizedDescription)
     }
   }
 }

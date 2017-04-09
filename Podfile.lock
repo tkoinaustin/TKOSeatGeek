@@ -17,6 +17,7 @@ PODS:
   - OHHTTPStubs/Swift (5.2.3):
     - OHHTTPStubs/Core
   - PromiseKit/CorePromise (4.1.7)
+  - ReachabilitySwift (3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -24,13 +25,15 @@ DEPENDENCIES:
   - OHHTTPStubs/HTTPMessage
   - OHHTTPStubs/Swift
   - PromiseKit/CorePromise
+  - ReachabilitySwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 19e5411075e7aba7e8b1163d8bfdc7b7b7ed5230
+PODFILE CHECKSUM: d9c6190e73ff2ede3c4bb4019885ae14fc93815a
 
 COCOAPODS: 1.2.0.rc.1
