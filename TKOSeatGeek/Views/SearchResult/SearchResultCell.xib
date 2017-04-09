@@ -51,7 +51,7 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-tp-o8p">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-tp-o8p">
                     <rect key="frame" x="8" y="7" width="39" height="34"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="14" id="MNB-aI-YtQ"/>
@@ -82,4 +82,7 @@
             <point key="canvasLocation" x="77.5" y="-225"/>
         </view>
     </objects>
+    <resources>
+        <image name="heart" width="2336" height="2118"/>
+    </resources>
 </document>

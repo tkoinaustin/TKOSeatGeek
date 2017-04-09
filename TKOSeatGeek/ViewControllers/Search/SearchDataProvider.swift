@@ -31,6 +31,7 @@ class SearchDataProvider: NSObject, UITableViewDataSource {
     if let cell = cell as? SearchResultCell {
       let event = viewModel.events[indexPath.row]
       cell.mainImage.image = nil
+      cell.id = event.id
       cell.titleLabel.text = event.title
       cell.locationLabel.text = event.location
       cell.dateLabel.text = event.startDate

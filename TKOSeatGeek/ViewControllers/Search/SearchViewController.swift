@@ -23,16 +23,15 @@ class SearchViewController: UIViewController {
   override func viewDidLoad() {
     viewModel.updateUI = { self.tableView.reloadData() }
     provider.viewModel = viewModel
-    
-    searchBar.delegate = self
-    
+    provider.registerCells(for: self.tableView)
+
     tableView.dataSource = provider
     tableView.delegate = self
-    provider.registerCells(for: self.tableView)
     tableView.estimatedRowHeight = 100
     tableView.rowHeight = UITableViewAutomaticDimension
     
-    self.navigationController?.isNavigationBarHidden = true
+    searchBar.delegate = self
+    navigationController?.isNavigationBarHidden = true
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -42,6 +41,7 @@ class SearchViewController: UIViewController {
 
     let image = (tableView.cellForRow(at: indexPath) as? SearchResultCell)?.mainImage.image
     let eventData = viewModel.events[indexPath.row]
+    detailViewController.updateTableViewCell = { self.tableView.reloadRows(at: [indexPath], with: .fade) }
     detailViewController.setup(eventData, image: image)
   }
 }

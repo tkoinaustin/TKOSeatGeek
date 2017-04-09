@@ -10,9 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
   
-  var event: Event!  
+  var event: Event!
   var image: UIImage?
-  
+  var updateTableViewCell: (() -> Void) = { }
+
   @IBOutlet weak var mainImage: UIImageView! { didSet {
     mainImage.layer.cornerRadius = 6.5
     mainImage.clipsToBounds = true
@@ -31,13 +32,19 @@ class DetailViewController: UIViewController {
     eventName.text = event?.title
   }}
 
-  @IBOutlet weak var toggleLike: UIButton!
+  @IBOutlet weak var toggleLike: UIButton! { didSet {
+    let likedImage = Favorites.isFavorite(event.id) ? "heart" : "heart-outline"
+    toggleLike.setImage(UIImage(named: likedImage), for: .normal)
+  }}
   
   @IBAction func toggleLikeAction(_ sender: UIButton) {
+    let likedImage = Favorites.toggle(event.id) ? "heart" : "heart-outline"
+    toggleLike.setImage(UIImage(named: likedImage), for: .normal)
   }
   
   
   @IBAction func dismissAction(_ sender: UIButton) {
+    updateTableViewCell()
     navigationController?.popViewController(animated: true)
   }
   

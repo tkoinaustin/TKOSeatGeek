@@ -9,7 +9,9 @@
 import UIKit
 
 class SearchResultCell: UITableViewCell {
-//  weak var content: Event!
+  var id: Int! { didSet {
+    likeImage.isHidden = !Favorites.isFavorite(id)
+  }}
   
   @IBOutlet weak var likeImage: UIImageView!
   @IBOutlet weak var mainImage: UIImageView! { didSet {
