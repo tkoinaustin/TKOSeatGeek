@@ -33,6 +33,8 @@
 		CBC9E8011E94398100F52E05 /* venues-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E7FF1E94398100F52E05 /* venues-200.response */; };
 		CBC9E8041E943A4900F52E05 /* performer-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E8021E943A4900F52E05 /* performer-200.response */; };
 		CBC9E8051E943A4900F52E05 /* performers-200.response in Resources */ = {isa = PBXBuildFile; fileRef = CBC9E8031E943A4900F52E05 /* performers-200.response */; };
+		CBF793781E99B6AD00EF6FF6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF793771E99B6AD00EF6FF6 /* DetailViewController.swift */; };
+		CBF7937A1E99B72500EF6FF6 /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF793791E99B72500EF6FF6 /* DetailView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		CBC9E7FF1E94398100F52E05 /* venues-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "venues-200.response"; path = "API/Responses/venues-200.response"; sourceTree = "<group>"; };
 		CBC9E8021E943A4900F52E05 /* performer-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "performer-200.response"; path = "API/Responses/performer-200.response"; sourceTree = "<group>"; };
 		CBC9E8031E943A4900F52E05 /* performers-200.response */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "performers-200.response"; path = "API/Responses/performers-200.response"; sourceTree = "<group>"; };
+		CBF793771E99B6AD00EF6FF6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ViewControllers/Detail/DetailViewController.swift; sourceTree = "<group>"; };
+		CBF793791E99B72500EF6FF6 /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = DetailView.storyboard; path = ViewControllers/Detail/DetailView.storyboard; sourceTree = "<group>"; };
 		CF71451F2519AED3D02D65C4 /* Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests.release.xcconfig"; sourceTree = "<group>"; };
 		D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek_TKOSeatGeekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0E010120934BE5C4876688B /* Pods_TKOSeatGeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TKOSeatGeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +215,7 @@
 		CBBE7D721E96762900968DCF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CBF793741E99B52D00EF6FF6 /* Detail */,
 				CBBE7D731E96764900968DCF /* Intro */,
 				CBBE7D781E96A97C00968DCF /* Search */,
 			);
@@ -266,6 +271,15 @@
 				CBC9E7F81E94349400F52E05 /* EndpointTests.swift */,
 			);
 			name = Endpoints;
+			sourceTree = "<group>";
+		};
+		CBF793741E99B52D00EF6FF6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CBF793771E99B6AD00EF6FF6 /* DetailViewController.swift */,
+				CBF793791E99B72500EF6FF6 /* DetailView.storyboard */,
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +376,7 @@
 			files = (
 				CB89AE681E93DE6400208E71 /* LaunchScreen.storyboard in Resources */,
 				CB96E3281E994D88009E9822 /* SearchResultCell.xib in Resources */,
+				CBF7937A1E99B72500EF6FF6 /* DetailView.storyboard in Resources */,
 				CB96E3221E994CDA009E9822 /* SearchView.storyboard in Resources */,
 				CB96E31B1E994CB3009E9822 /* IntroView.storyboard in Resources */,
 				CB89AE651E93DE6400208E71 /* Assets.xcassets in Resources */,
@@ -495,6 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBF793781E99B6AD00EF6FF6 /* DetailViewController.swift in Sources */,
 				CB96E31C1E994CB3009E9822 /* IntroViewController.swift in Sources */,
 				CB96E3211E994CDA009E9822 /* SearchDataProvider.swift in Sources */,
 				CB96E3231E994CDA009E9822 /* SearchViewController.swift in Sources */,

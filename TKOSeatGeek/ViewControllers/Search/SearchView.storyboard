@@ -21,15 +21,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-Hj-3UH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-mS-nL8">
-                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-mS-nL8">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-Hj-3UH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </searchBar>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="YTD-Hj-3UH" firstAttribute="top" secondItem="nh3-b3-FI5" secondAttribute="bottom" id="2AH-cm-EZP"/>
                             <constraint firstItem="vwn-mS-nL8" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="6Yx-nw-wA9"/>
@@ -40,7 +41,9 @@
                             <constraint firstItem="TwP-Mo-w6H" firstAttribute="top" secondItem="vwn-mS-nL8" secondAttribute="bottom" id="tSa-mC-Wtq"/>
                         </constraints>
                     </view>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="YTD-Hj-3UH" id="jtz-tf-X4w"/>
                         <outlet property="searchDisplayController" destination="TrS-Jr-IfC" id="XR8-11-9br"/>

@@ -72,6 +72,8 @@
                             <constraint firstItem="3l1-LP-fm7" firstAttribute="top" secondItem="Qf0-9m-0JA" secondAttribute="bottom" constant="32" id="zVB-bN-eSw"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="bottomLabel" destination="Ofw-Qh-uiT" id="pcx-Jz-N48"/>
                         <outlet property="continueButton" destination="3l1-LP-fm7" id="lgR-iq-Tac"/>

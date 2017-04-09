@@ -21,7 +21,7 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ME3-7b-tJ5">
                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.92567274305555558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="ME3-7b-tJ5" secondAttribute="height" multiplier="1:1" id="Q2Q-SQ-Ply"/>
                             </constraints>
@@ -51,13 +51,22 @@
                         </stackView>
                     </subviews>
                 </stackView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GgH-tp-o8p">
+                    <rect key="frame" x="8" y="7" width="39" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="MNB-aI-YtQ"/>
+                        <constraint firstAttribute="width" constant="16" id="vgc-Z9-XY8"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Lsa-XI-uGu" secondAttribute="trailing" constant="15" id="CF3-us-2RL"/>
                 <constraint firstItem="Lsa-XI-uGu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Mh0-tS-A0p"/>
                 <constraint firstItem="Lsa-XI-uGu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UdD-rV-mu0"/>
+                <constraint firstItem="GgH-tp-o8p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="l3F-Nh-s1z"/>
                 <constraint firstAttribute="bottom" secondItem="Lsa-XI-uGu" secondAttribute="bottom" constant="15" id="pcJ-Lh-g3E"/>
+                <constraint firstItem="GgH-tp-o8p" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="sRA-3X-hYg"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
@@ -65,6 +74,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="dateLabel" destination="i6v-dw-NwB" id="aEd-6g-9WD"/>
+                <outlet property="likeImage" destination="GgH-tp-o8p" id="ecV-yf-ipQ"/>
                 <outlet property="locationLabel" destination="7tU-cP-LU6" id="wDb-rR-mzi"/>
                 <outlet property="mainImage" destination="ME3-7b-tJ5" id="gOW-LP-JEk"/>
                 <outlet property="titleLabel" destination="yaR-J4-RYH" id="Vha-gN-isb"/>

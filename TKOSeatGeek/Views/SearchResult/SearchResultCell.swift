@@ -11,6 +11,7 @@ import UIKit
 class SearchResultCell: UITableViewCell {
 //  weak var content: Event!
   
+  @IBOutlet weak var likeImage: UIImageView!
   @IBOutlet weak var mainImage: UIImageView! { didSet {
     mainImage.layer.cornerRadius = 6.5
     mainImage.clipsToBounds = true

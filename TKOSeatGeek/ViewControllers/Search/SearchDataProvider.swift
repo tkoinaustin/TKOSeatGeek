@@ -38,6 +38,7 @@ class SearchDataProvider: NSObject, UITableViewDataSource {
         cell.mainImage.image = image
       }
     }
+    cell.selectionStyle = .none
     
     return cell
   }
