@@ -22,6 +22,7 @@ class IntroViewController: UIViewController {
     let height = view.frame.height
     let transformButton = CGAffineTransform.identity.translatedBy(x: 0, y: height)
     continueButton.transform = transformButton
+    continueButton.tintColor = UIColor.white
     instructionsLabel.transform = transformButton
   }
   

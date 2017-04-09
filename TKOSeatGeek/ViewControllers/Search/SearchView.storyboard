@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vwn-mS-nL8">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="24" width="375" height="643"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YTD-Hj-3UH">
@@ -32,10 +32,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YTD-Hj-3UH" firstAttribute="top" secondItem="nh3-b3-FI5" secondAttribute="bottom" id="2AH-cm-EZP"/>
                             <constraint firstItem="vwn-mS-nL8" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="6Yx-nw-wA9"/>
                             <constraint firstAttribute="trailing" secondItem="vwn-mS-nL8" secondAttribute="trailing" id="F7p-nk-pC0"/>
-                            <constraint firstItem="vwn-mS-nL8" firstAttribute="top" secondItem="YTD-Hj-3UH" secondAttribute="bottom" id="I2m-AV-z7C"/>
+                            <constraint firstItem="vwn-mS-nL8" firstAttribute="top" secondItem="YTD-Hj-3UH" secondAttribute="bottom" constant="-20" id="I2m-AV-z7C"/>
+                            <constraint firstItem="YTD-Hj-3UH" firstAttribute="top" secondItem="nh3-b3-FI5" secondAttribute="bottom" id="YLJ-p7-h4Z"/>
                             <constraint firstAttribute="trailing" secondItem="YTD-Hj-3UH" secondAttribute="trailing" id="idE-hp-pGb"/>
                             <constraint firstItem="YTD-Hj-3UH" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="jFz-8W-6vo"/>
                             <constraint firstItem="TwP-Mo-w6H" firstAttribute="top" secondItem="vwn-mS-nL8" secondAttribute="bottom" id="tSa-mC-Wtq"/>

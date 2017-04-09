@@ -74,4 +74,8 @@ extension SearchViewController: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchBar.endEditing(true)
   }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.endEditing(true)
+  }
 }
