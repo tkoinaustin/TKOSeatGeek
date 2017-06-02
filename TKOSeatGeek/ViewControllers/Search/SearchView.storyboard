@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zg1-Ht-egm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zg1-Ht-egm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,9 +29,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </searchBar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="I7c-O3-mn1">
+                                <rect key="frame" x="177.5" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="I7c-O3-mn1" firstAttribute="centerX" secondItem="e1e-BI-xBS" secondAttribute="centerX" id="33R-ad-o8n"/>
+                            <constraint firstItem="I7c-O3-mn1" firstAttribute="centerY" secondItem="e1e-BI-xBS" secondAttribute="centerY" id="4j6-00-yxP"/>
                             <constraint firstItem="vwn-mS-nL8" firstAttribute="leading" secondItem="e1e-BI-xBS" secondAttribute="leading" id="6Yx-nw-wA9"/>
                             <constraint firstAttribute="trailing" secondItem="vwn-mS-nL8" secondAttribute="trailing" id="F7p-nk-pC0"/>
                             <constraint firstItem="vwn-mS-nL8" firstAttribute="top" secondItem="YTD-Hj-3UH" secondAttribute="bottom" constant="-20" id="I2m-AV-z7C"/>
@@ -46,6 +51,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="I7c-O3-mn1" id="b8B-sT-BEF"/>
                         <outlet property="searchBar" destination="YTD-Hj-3UH" id="jtz-tf-X4w"/>
                         <outlet property="searchDisplayController" destination="TrS-Jr-IfC" id="XR8-11-9br"/>
                         <outlet property="tableView" destination="vwn-mS-nL8" id="UUh-Ex-eA0"/>

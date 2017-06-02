@@ -20,10 +20,17 @@ class SearchViewModel: NSObject {
     if searchString == "" {
       events.removeAll()
       updateUI()
+    }
+  }}
+  
+  func searchForEvents() {
+    if searchString == "" {
+      events.removeAll()
+      updateUI()
     } else {
       _ = self.load(searchString)
     }
-  }}
+  }
   
   func load(_ searchString: String) -> Promise<Void> {
     return EventSet.load(searchString).then { results -> Promise<Void> in

@@ -15,14 +15,18 @@ class SearchViewController: UIViewController {
   
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
     searchBar.showsCancelButton = true
-    searchBar.placeholder = "Looking for something?"
+    searchBar.placeholder = "Whatcha lookin' for?"
   }}
   
+  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!   
   @IBOutlet private weak var tableView: UITableView!
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    viewModel.updateUI = { self.tableView.reloadData() }
+    viewModel.updateUI = {
+      self.tableView.reloadData()
+      self.activityIndicator.stopAnimating()
+    }
     viewModel.showError = showConnectionProblems
     provider.viewModel = viewModel
     provider.registerCells(for: self.tableView)
@@ -77,6 +81,8 @@ extension SearchViewController: UISearchBarDelegate {
   }
   
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    self.activityIndicator.startAnimating()
+    viewModel.searchForEvents()
     searchBar.endEditing(true)
   }
 }
