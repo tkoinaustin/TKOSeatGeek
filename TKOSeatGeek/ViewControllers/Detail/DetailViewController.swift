@@ -14,25 +14,25 @@ class DetailViewController: UIViewController {
   var image: UIImage?
   var updateTableViewCell: (() -> Void) = { }
 
-  @IBOutlet weak var mainImage: UIImageView! { didSet {
+  @IBOutlet private weak var mainImage: UIImageView! { didSet {
     mainImage.layer.cornerRadius = 6.5
     mainImage.clipsToBounds = true
     mainImage.image = image
   }}
   
-  @IBOutlet weak var startDate: UILabel! { didSet {
+  @IBOutlet private weak var startDate: UILabel! { didSet {
       startDate.text = event?.startDate
   }}
   
-  @IBOutlet weak var location: UILabel! { didSet {
+  @IBOutlet private weak var location: UILabel! { didSet {
       location.text = event?.location
   }}
   
-  @IBOutlet weak var eventName: UILabel! { didSet {
+  @IBOutlet private weak var eventName: UILabel! { didSet {
     eventName.text = event?.title
   }}
 
-  @IBOutlet weak var toggleLike: UIButton! { didSet {
+  @IBOutlet private weak var toggleLike: UIButton! { didSet {
     let likedImage = Favorites.isFavorite(event.id) ? "heart" : "heart-outline"
     toggleLike.setImage(UIImage(named: likedImage), for: .normal)
   }}
@@ -41,8 +41,7 @@ class DetailViewController: UIViewController {
     let likedImage = Favorites.toggle(event.id) ? "heart" : "heart-outline"
     toggleLike.setImage(UIImage(named: likedImage), for: .normal)
   }
-  
-  
+
   @IBAction func dismissAction(_ sender: UIButton) {
     updateTableViewCell()
     _ = navigationController?.popViewController(animated: true)

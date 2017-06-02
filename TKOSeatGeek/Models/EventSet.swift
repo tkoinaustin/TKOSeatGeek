@@ -16,9 +16,9 @@ class EventSet {
   let convertToDate = DateFormatter()
   let converToString = DateFormatter()
   
-  var page: String { return data["meta","page"].stringValue }
-  var perPage: String { return data["meta","per_page"].stringValue }
-  var total: String { return data["meta","total"].stringValue }
+  var page: String { return data["meta", "page"].stringValue }
+  var perPage: String { return data["meta", "per_page"].stringValue }
+  var total: String { return data["meta", "total"].stringValue }
   
   required init?(from data: JSON) {
     guard EventSet.isValid(data) else { return nil }
@@ -36,7 +36,7 @@ class EventSet {
       if let content = Event(
         id: event["id"].int,
         title: event["title"].string,
-        location: event["venue","extended_address"].string,
+        location: event["venue", "extended_address"].string,
         startDate: converToString.string(from: date),
         imageString: event["performers"][0]["image"].string
       ) { events.append(content) }
@@ -52,7 +52,7 @@ class EventSet {
       page: page
       ).then(on: DispatchQueue.global(qos: .background)) {response in
         return Promise<EventSet> { fulfill, reject in
-          guard let results = EventSet(from: response.body) else { return reject(NSError.cancelledError() )  }
+          guard let results = EventSet(from: response.body) else { return reject(NSError.cancelledError() ) }
           fulfill(results)
         }
     }

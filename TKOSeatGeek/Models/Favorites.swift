@@ -30,6 +30,4 @@ class Favorites {
     if defaults.object(forKey: id.description) == nil { return self.set(id) }
     else { return self.remove(id) }
   }
-  
-  
 }

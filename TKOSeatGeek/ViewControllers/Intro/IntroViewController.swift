@@ -27,6 +27,7 @@ class IntroViewController: UIViewController {
   }
   
   override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     let height = view.frame.height
     let transformLogo = CGAffineTransform.identity.translatedBy(x: 0, y: -height)
     UIView.animate(withDuration: 0.8, delay: 0.1, options: UIViewAnimationOptions(), animations: {

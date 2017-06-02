@@ -36,7 +36,7 @@ class Event {
     guard let startDate = startDate else { return nil }
     self.startDate = startDate
     
-    if imageString == nil { self.imageUrl = nil}
+    if imageString == nil { self.imageUrl = nil }
     else { self.imageUrl = URL(string: imageString!) }
   }
 }

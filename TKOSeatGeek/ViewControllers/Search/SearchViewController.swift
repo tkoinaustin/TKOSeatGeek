@@ -13,14 +13,15 @@ class SearchViewController: UIViewController {
   let viewModel = SearchViewModel()
   let provider = SearchDataProvider()
   
-  @IBOutlet weak var searchBar: UISearchBar! { didSet {
+  @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
     searchBar.showsCancelButton = true
     searchBar.placeholder = "Looking for something?"
   }}
   
-  @IBOutlet weak var tableView: UITableView!
+  @IBOutlet private weak var tableView: UITableView!
   
   override func viewDidLoad() {
+    super.viewDidLoad()
     viewModel.updateUI = { self.tableView.reloadData() }
     viewModel.showError = showConnectionProblems
     provider.viewModel = viewModel
@@ -52,7 +53,7 @@ class SearchViewController: UIViewController {
     alertViewController.addAction(action)
     
     self.searchBar.endEditing(true)
-    self.present(alertViewController,animated: true)
+    self.present(alertViewController, animated: true)
   }
 }
 

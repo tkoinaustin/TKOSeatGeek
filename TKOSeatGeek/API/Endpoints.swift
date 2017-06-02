@@ -31,8 +31,10 @@ class Endpoints {
     
     func query() -> String {
       switch self {
-      case .events(query: let query, size: let size, page: let page): return "q=\(query)&page=\(page)&per_page=\(size)&client_id=\(API.clientId)"
-      default: return "client_id=\(API.clientId)"
+      case .events(query: let query, size: let size, page: let page):
+        return "q=\(query)&page=\(page)&per_page=\(size)&client_id=\(API.clientId)"
+      default:
+        return "client_id=\(API.clientId)"
       }
     }
     

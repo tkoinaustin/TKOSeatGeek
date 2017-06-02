@@ -14,7 +14,7 @@ class SearchViewModel: NSObject {
   var results: EventSet!
   var events = [Event]()
   var updateUI: (() -> Void) = { }
-  var showError:((String) -> Void) = { _ in }
+  var showError: ((String) -> Void) = { _ in }
   
   var searchString: String = "" { didSet {
     if searchString == "" {
