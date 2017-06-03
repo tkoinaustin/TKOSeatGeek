@@ -18,7 +18,7 @@ class SearchViewController: UIViewController {
     searchBar.placeholder = "Whatcha lookin' for?"
   }}
   
-  @IBOutlet weak var activityIndicator: UIActivityIndicatorView!   
+  @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private weak var tableView: UITableView!
   
   override func viewDidLoad() {

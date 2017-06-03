@@ -13,8 +13,6 @@ import PromiseKit
 class EventSet {
   let data: JSON
   let events: [Event]
-  let convertToDate = DateFormatter()
-  let converToString = DateFormatter()
   
   var page: String { return data["meta", "page"].stringValue }
   var perPage: String { return data["meta", "per_page"].stringValue }
@@ -25,21 +23,9 @@ class EventSet {
     
     self.data = data
     var events = [Event]()
-    convertToDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-    converToString.dateStyle = .long
-    converToString.timeStyle = .short
     
     for event in data["events"].arrayValue {
-      guard let dateString = event["datetime_local"].string else { continue }
-      guard let date = convertToDate.date(from: dateString) else { continue }
-
-      if let content = Event(
-        id: event["id"].int,
-        title: event["title"].string,
-        location: event["venue", "extended_address"].string,
-        startDate: converToString.string(from: date),
-        imageString: event["performers"][0]["image"].string
-      ) { events.append(content) }
+      if let content = Event(from: event) { events.append(content) }
     }
   
     self.events = events

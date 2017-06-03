@@ -11,32 +11,26 @@ import SwiftyJSON
 import PromiseKit
 
 class Event {
-  let id: Int
-  let title: String
-  let location: String
-  let startDate: String
-  let imageUrl: URL?
-  
-  init?(
-    id: Int?,
-    title: String?,
-    location: String?,
-    startDate: String?,
-    imageString: String?
-    ) {
-    guard let id = id else { return nil }
-    self.id = id
+  let data: JSON
+  let convertToDate = DateFormatter()
+  let converToString = DateFormatter()
 
-    guard let title = title else { return nil }
-    self.title = title
+  required init? (from data: JSON) {
+    guard data.dictionary != nil else { return nil }
     
-    guard let location = location else { return nil }
-    self.location = location
-    
-    guard let startDate = startDate else { return nil }
-    self.startDate = startDate
-    
-    if imageString == nil { self.imageUrl = nil }
-    else { self.imageUrl = URL(string: imageString!) }
+    self.data = data
+    convertToDate.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    converToString.dateStyle = .long
+    converToString.timeStyle = .short
+  }
+  
+  var id: Int { return data["id"].intValue }
+  var title: String { return data["title"].stringValue }
+  var location: String { return data["venue", "extended_address"].stringValue }
+  var imageUrl: URL? { return URL(string: data["performers"][0]["image"].stringValue) }
+  var startDate: String? {
+    guard let dateString = data["datetime_local"].string else { return nil }
+    guard let date = convertToDate.date(from: dateString) else { return nil }
+    return converToString.string(from: date)
   }
 }
