@@ -54,7 +54,12 @@ struct APIRequest {
 
 class API {
   static var urlComponents = URLComponents(string: "https://api.seatgeek.com")!
-  static let clientId = "NzIyNDM5OHwxNDkxMjQyOTI0LjAx"
+  static var clientId = { () -> String in
+    guard let fileUrl = Bundle.main.url(forResource: "APIinfo", withExtension: "plist") else { return "" }
+    let dictionary = NSDictionary(contentsOf: fileUrl) as? [String: String]
+    guard let dict = dictionary else { return "" }
+    return dict["SeatGeekAPIKey"] ?? ""
+  }()
 
   static var session = URLSession.shared
   

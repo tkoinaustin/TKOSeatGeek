@@ -11,6 +11,7 @@
 		9F476C09F83FFA7CF0ED969B /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DB260C612A40D79753D79C /* Pods_TKOSeatGeek_TKOSeatGeekTests.framework */; };
 		CB3BCFD41E93FB8C00A3D813 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCFD31E93FB8C00A3D813 /* API.swift */; };
 		CB3BCFD61E93FE7000A3D813 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3BCFD51E93FE7000A3D813 /* APITests.swift */; };
+		CB5918DA1EE42EF80093AC57 /* APIinfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5918D91EE42EF80093AC57 /* APIinfo.plist */; };
 		CB89AE5E1E93DE6400208E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */; };
 		CB89AE651E93DE6400208E71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE641E93DE6400208E71 /* Assets.xcassets */; };
 		CB89AE681E93DE6400208E71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB89AE661E93DE6400208E71 /* LaunchScreen.storyboard */; };
@@ -56,6 +57,7 @@
 		5E2988D8160462B601B20F72 /* Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKOSeatGeek-TKOSeatGeekTests/Pods-TKOSeatGeek-TKOSeatGeekTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB3BCFD31E93FB8C00A3D813 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = API/API.swift; sourceTree = "<group>"; };
 		CB3BCFD51E93FE7000A3D813 /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APITests.swift; path = API/APITests.swift; sourceTree = "<group>"; };
+		CB5918D91EE42EF80093AC57 /* APIinfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = APIinfo.plist; sourceTree = "<group>"; };
 		CB89AE5A1E93DE6400208E71 /* TKOSeatGeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKOSeatGeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB89AE641E93DE6400208E71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				CB89AE5D1E93DE6400208E71 /* AppDelegate.swift */,
 				CB89AE641E93DE6400208E71 /* Assets.xcassets */,
 				CB89AE691E93DE6400208E71 /* Info.plist */,
+				CB5918D91EE42EF80093AC57 /* APIinfo.plist */,
 				CB3BCFD11E93FB1800A3D813 /* API */,
 				CBBE7D7F1E990AF900968DCF /* Models */,
 				CB96E3251E994D39009E9822 /* Views */,
@@ -382,6 +385,7 @@
 				CBF7937A1E99B72500EF6FF6 /* DetailView.storyboard in Resources */,
 				CB96E3221E994CDA009E9822 /* SearchView.storyboard in Resources */,
 				CB96E31B1E994CB3009E9822 /* IntroView.storyboard in Resources */,
+				CB5918DA1EE42EF80093AC57 /* APIinfo.plist in Resources */,
 				CB89AE651E93DE6400208E71 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

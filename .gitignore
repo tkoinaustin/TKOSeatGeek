@@ -37,3 +37,4 @@ build/
 # CocoaPods
 Pods/
 /*.xcworkspace
+APIinfo.plist

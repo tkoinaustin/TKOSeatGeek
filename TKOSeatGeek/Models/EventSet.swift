@@ -31,7 +31,17 @@ class EventSet {
     self.events = events
   }
   
-  static func load(_ searchString: String, resultSize: String = "100", page: String = "1") -> Promise<EventSet> {
+  static func loadPerformers(_ searchString: String) -> Promise<EventSet> {
+    return Endpoints.performers(searchString)
+      .then(on: DispatchQueue.global(qos: .background)) {response in
+        return Promise<EventSet> { fulfill, reject in
+          guard let results = EventSet(from: response.body) else { return reject(NSError.cancelledError() ) }
+          fulfill(results)
+        }
+    }
+  }
+  
+  static func loadEvents(_ searchString: String, resultSize: String = "100", page: String = "1") -> Promise<EventSet> {
     return Endpoints.events(
       searchString: searchString,
       resultSize: resultSize,

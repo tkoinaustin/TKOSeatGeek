@@ -33,7 +33,7 @@ class SearchViewModel: NSObject {
   }
   
   func load(_ searchString: String) -> Promise<Void> {
-    return EventSet.load(searchString).then { results -> Promise<Void> in
+    return EventSet.loadEvents(searchString).then { results -> Promise<Void> in
       print(results)
       self.results = results
       self.events = results.events

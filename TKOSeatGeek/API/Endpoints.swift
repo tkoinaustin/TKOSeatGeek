@@ -15,16 +15,16 @@ class Endpoints {
     case event(id: String)
     case venues
     case venue(id: String)
-    case performers
+    case performers(query: String)
     case performer(id: String)
   
     func path() -> String {
       switch self {
       case .events(query: _, size: _, page: _): return "/2/events"
       case .event(id: let id): return "/2/events/\(id)"
-      case .venues: return "/2/venues"
+      case .venues(query: _): return "/2/venues"
       case .venue(id: let id): return "/2/venues/\(id)"
-      case .performers: return "/2/performers"
+      case .performers(query: _): return "/2/performers"
       case .performer(id: let id): return "/2/performers/\(id)"
       }
     }
@@ -33,11 +33,12 @@ class Endpoints {
       switch self {
       case .events(query: let query, size: let size, page: let page):
         return "q=\(query)&page=\(page)&per_page=\(size)&client_id=\(API.clientId)"
+      case .performers(query: let query):
+        return "q=\(query)&client_id=\(API.clientId)"
       default:
-        return "client_id=\(API.clientId)"
+        return "q=\(query)&client_id=\(API.clientId)"
       }
     }
-    
   }
   
   static func events(searchString: String, resultSize: String, page: String) -> Promise<APIResponse> {
@@ -63,13 +64,17 @@ class Endpoints {
     return API.fire(request)
   }
   
-  static func performers() -> Promise<APIResponse> {
-    let request = APIRequest(.get, path: Endpoint.performers.path(), query: Endpoint.performers.query())
+  static func performers(_ query: String) -> Promise<APIResponse> {
+    let request = APIRequest(.get,
+                             path: Endpoint.performers(query: query).path(),
+                             query: Endpoint.performers(query: query).query())
     return API.fire(request)
   }
   
   static func performer(_ id: String) -> Promise<APIResponse> {
-    let request = APIRequest(.get, path: Endpoint.performer(id: id).path(), query: Endpoint.performer(id: id).query())
+    let request = APIRequest(.get,
+                             path: Endpoint.performer(id: id).path(),
+                             query: Endpoint.performer(id: id).query())
     return API.fire(request)
   }
 }
