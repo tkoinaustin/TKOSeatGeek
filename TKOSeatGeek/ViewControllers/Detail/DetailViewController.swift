@@ -23,6 +23,9 @@ class DetailViewController: UIViewController {
   @IBOutlet private weak var startDate: UILabel! { didSet {
       startDate.text = event?.startDate
   }}
+  @IBOutlet private weak var performers: UILabel! { didSet {
+    performers.text = event?.performers
+    }}
   
   @IBOutlet private weak var location: UILabel! { didSet {
       location.text = event?.location

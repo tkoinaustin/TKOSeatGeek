@@ -26,8 +26,16 @@ class Event {
   
   var id: Int { return data["id"].intValue }
   var title: String { return data["title"].stringValue }
+  var type: String { return data["type"].stringValue }
   var location: String { return data["venue", "extended_address"].stringValue }
   var imageUrl: URL? { return URL(string: data["performers"][0]["image"].stringValue) }
+  var performers: String {
+    var performers = ""
+    for i in 0..<data["performers"].count {
+      performers += data["performers"][i]["name"].stringValue + "\n"
+    }
+    return performers
+  }
   var startDate: String? {
     guard let dateString = data["datetime_local"].string else { return nil }
     guard let date = convertToDate.date(from: dateString) else { return nil }
