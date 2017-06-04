@@ -11,7 +11,7 @@ import PromiseKit
 
 class SearchResultCell: UITableViewCell {
   var event: Event! { didSet {
-    self.mainImage.image = nil
+    self.mainImage.image = UIImage(named: "no_pic")
     self.id = event.id
     self.titleLabel.text = event.title
     self.locationLabel.text = event.location

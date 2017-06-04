@@ -45,8 +45,10 @@ class SearchViewController: UIViewController {
     guard let detailViewController = segue.destination as? DetailViewController else { return }
     guard let indexPath = sender as? IndexPath else { return }
 
-    let image = (tableView.cellForRow(at: indexPath) as? SearchResultCell)?.mainImage.image
     let eventData = viewModel.events[indexPath.row]
+    let image = eventData.imageUrl == nil ?
+      nil :
+      (tableView.cellForRow(at: indexPath) as? SearchResultCell)?.mainImage.image
     detailViewController.updateTableViewCell = { self.tableView.reloadRows(at: [indexPath], with: .fade) }
     detailViewController.setup(eventData, image: image)
   }
