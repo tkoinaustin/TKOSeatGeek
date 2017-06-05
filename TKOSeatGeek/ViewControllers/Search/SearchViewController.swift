@@ -14,10 +14,13 @@ class SearchViewController: UIViewController {
   let provider = SearchDataProvider()
   
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
-    searchBar.showsCancelButton = true
-    searchBar.placeholder = "Whatcha lookin' for?"
+//    searchBar.showsCancelButton = true
+//    searchBar.placeholder = "Whatcha lookin' for?"
+    let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
+    UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject],
+                                                        for: UIControlState.normal)
   }}
-  
+
   @IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
   @IBOutlet private weak var tableView: UITableView!
   

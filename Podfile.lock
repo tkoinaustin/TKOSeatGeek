@@ -18,9 +18,6 @@ PODS:
     - OHHTTPStubs/Core
   - PromiseKit/CorePromise (4.1.7)
   - ReachabilitySwift (3)
-  - RxCocoa (3.4.0):
-    - RxSwift (~> 3.4)
-  - RxSwift (3.4.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -29,18 +26,14 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift
   - PromiseKit/CorePromise
   - ReachabilitySwift
-  - RxCocoa
-  - RxSwift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  RxCocoa: d14ef6b6029e1ddc6e966508c09289090de68ff9
-  RxSwift: 3789a1af753002a14edecdb698a2424624296a9c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 82df66ae9244f35bfbf8f4837ec3132bd35bd5be
+PODFILE CHECKSUM: d9c6190e73ff2ede3c4bb4019885ae14fc93815a
 
 COCOAPODS: 1.2.1

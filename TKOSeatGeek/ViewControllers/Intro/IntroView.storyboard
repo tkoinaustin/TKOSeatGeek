@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OU2-4P-Fwl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16G8c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OU2-4P-Fwl">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,17 +40,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HMt-T5-T1r">
-                                <rect key="frame" x="50" y="193" width="275" height="281.5"/>
+                                <rect key="frame" x="50" y="121.5" width="275" height="425"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qf0-9m-0JA">
-                                        <rect key="frame" x="5" y="0.0" width="265.5" height="200.5"/>
-                                        <string key="text">Using the power of SeatGeek, find all your favorite teams, entertainers and events, see when  and where they are playing, anywhere in the country.</string>
+                                        <rect key="frame" x="5" y="0.0" width="265.5" height="344"/>
+                                        <string key="text">Using the power of SeatGeek, find all your favorite teams, entertainers and events, see when  and where they are playing, anywhere in the country.  Just type in a team, venue or band and you can follow them anywhere.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-LP-fm7">
-                                        <rect key="frame" x="89" y="240.5" width="97" height="41"/>
+                                        <rect key="frame" x="89" y="384" width="97" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
