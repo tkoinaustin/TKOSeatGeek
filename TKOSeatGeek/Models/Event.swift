@@ -34,7 +34,7 @@ class Event {
     for i in 0..<data["performers"].count {
       performers += data["performers"][i]["name"].stringValue + "\n"
     }
-    return performers
+    return performers.substring(to: performers.index(before: performers.endIndex))
   }
   var startDate: String? {
     guard let dateString = data["datetime_local"].string else { return nil }

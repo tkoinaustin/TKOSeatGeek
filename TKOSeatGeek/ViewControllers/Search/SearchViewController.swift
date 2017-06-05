@@ -14,8 +14,6 @@ class SearchViewController: UIViewController {
   let provider = SearchDataProvider()
   
   @IBOutlet fileprivate weak var searchBar: UISearchBar! { didSet {
-//    searchBar.showsCancelButton = true
-//    searchBar.placeholder = "Whatcha lookin' for?"
     let cancelButtonAttributes: NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
     UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes as? [String : AnyObject],
                                                         for: UIControlState.normal)
@@ -56,7 +54,9 @@ class SearchViewController: UIViewController {
     detailViewController.setup(eventData, image: image)
   }
   
-  func showConnectionProblems(_ desc: String) {
+  func showConnectionProblems(_ error: APIError) {
+    self.activityIndicator.stopAnimating()
+    let desc = error.desc()
     let alertViewController = UIAlertController(title: "Error", message: desc, preferredStyle: .alert)
     let action = UIAlertAction(title: "OK", style: .cancel)
     alertViewController.addAction(action)

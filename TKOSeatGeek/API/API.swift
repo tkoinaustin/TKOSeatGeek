@@ -29,6 +29,20 @@ enum APIError: Error {
   case request
   case server
   case reachability
+  case badkey
+  case noResults
+  
+  func desc() -> String {
+    switch self {
+    case .generic: return "Generic API Error"
+    case .body: return "Error with API body Error"
+    case .request: return "Error with API request Error"
+    case .server: return "Server Error"
+    case .reachability: return "Network is unreachable, check network settings"
+    case .badkey: return "OpenCage API key problem"
+    case .noResults: return "The query returned no results"
+    }
+  }
 }
 
 struct APIRequest {
