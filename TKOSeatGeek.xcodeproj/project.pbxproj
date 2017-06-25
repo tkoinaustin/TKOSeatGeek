@@ -220,6 +220,7 @@
 		CBBE7D721E96762900968DCF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CBDAC8FF1F0003FA00F76A5C /* FTUE */,
 				CBBE7D731E96764900968DCF /* Intro */,
 				CBBE7D781E96A97C00968DCF /* Search */,
 				CBF793741E99B52D00EF6FF6 /* Detail */,
@@ -277,6 +278,13 @@
 				CBC9E7F81E94349400F52E05 /* EndpointTests.swift */,
 			);
 			name = Endpoints;
+			sourceTree = "<group>";
+		};
+		CBDAC8FF1F0003FA00F76A5C /* FTUE */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FTUE;
 			sourceTree = "<group>";
 		};
 		CBF793741E99B52D00EF6FF6 /* Detail */ = {
@@ -677,8 +685,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOSeatGeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tkosolutions.TKOSeatGeek;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.eventtracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -691,8 +700,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = H4UQYGEL4C;
 				INFOPLIST_FILE = TKOSeatGeek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tkosolutions.TKOSeatGeek;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tko-solutions.eventtracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
